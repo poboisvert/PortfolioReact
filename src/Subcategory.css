@@ -1,0 +1,12 @@
+.subcategory {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.subcategory > p {
+  margin-left: 5px;
+}

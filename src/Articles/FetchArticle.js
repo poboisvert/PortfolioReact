@@ -2,6 +2,14 @@ import React from "react";
 import "./Articles.css";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import NavigationOptions from "../Shared/NavigationOptions";
+import {
+  Article,
+  Preview,
+  Title,
+  Image,
+  Text,
+  Last,
+} from "./styles/FetchArticle";
 
 const data = {
   content: {
@@ -13,7 +21,7 @@ const data = {
           "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
         link: "www.google.com",
         islast: null,
-        div: "articles__container",
+        div: "<Article>",
       },
       {
         image:
@@ -23,7 +31,7 @@ const data = {
           "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
         link: "www.google.com",
         islast: null,
-        div: "articles__container",
+        div: "<Article>",
       },
       {
         image:
@@ -33,7 +41,7 @@ const data = {
           "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
         link: "www.google.com",
         islast: null,
-        div: "articles__container",
+        div: "<Article>",
       },
       {
         image: "https://markdowntomedium.com/img/markdowneditor.jpg",
@@ -42,7 +50,7 @@ const data = {
           "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         link: "www.google.com",
         islast: "last",
-        div: "articles__container",
+        div: "<Article>",
       },
     ],
   },
@@ -57,19 +65,37 @@ export default class FetchArticle extends React.Component {
         ) : (
           <>
             {data.content.body.map((block) => (
-              <div className={block.div + (block.islast ? " last" : "")}>
-                <div className="articles__preview">
-                  <img src={block.image} alt="thumbnail" />
-                </div>
-                <div className="articles__title">{block.title}</div>
-                <h4>January 21, 2021</h4>
-                <p>{block.description}</p>
-                <NavigationOptions
-                  Icon={ArrowRightIcon}
-                  title="Read More"
-                  color="#4201ff"
-                />
-              </div>
+              <>
+                {block.islast ? (
+                  <Last>
+                    <Preview>
+                      <Image src={block.image} alt="thumbnail" />
+                    </Preview>
+                    <Text>January 21, 2021</Text>
+                    <Title>{block.title}</Title>
+                    <p>{block.description}</p>
+                    <NavigationOptions
+                      Icon={ArrowRightIcon}
+                      title="Read More"
+                      color="#4201ff"
+                    />
+                  </Last>
+                ) : (
+                  <Article>
+                    <Preview>
+                      <Image src={block.image} alt="thumbnail" />
+                    </Preview>
+                    <Text>January 21, 2021</Text>
+                    <Title>{block.title}</Title>
+                    <p>{block.description}</p>
+                    <NavigationOptions
+                      Icon={ArrowRightIcon}
+                      title="Read More"
+                      color="#4201ff"
+                    />
+                  </Article>
+                )}
+              </>
             ))}
           </>
         )}

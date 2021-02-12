@@ -1,9 +1,11 @@
 import React from "react";
 import FetchArticle from "./FetchArticle";
+import { Container } from "./styles/Articles";
+
 export default function ArticlesContainer() {
   return (
-    <div className="articlescontainer">
+    <Container>
       <FetchArticle />
-    </div>
+    </Container>
   );
 }

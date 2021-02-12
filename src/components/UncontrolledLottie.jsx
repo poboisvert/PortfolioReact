@@ -1,7 +1,7 @@
 // UncontrolledLottie.jsx
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../logo2.json";
+import animationData from "../logo.json";
 
 class UncontrolledLottie extends Component {
   render() {
@@ -14,11 +14,7 @@ class UncontrolledLottie extends Component {
       },
     };
 
-    return (
-      <div className="banner__picture">
-        <Lottie options={defaultOptions} />
-      </div>
-    );
+    return <Lottie options={defaultOptions} />;
   }
 }
 

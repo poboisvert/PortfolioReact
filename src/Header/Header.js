@@ -1,25 +1,23 @@
 import React from "react";
-import "./Header.css";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 import HomeIcon from "@material-ui/icons/Home";
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import ChatIcon from "@material-ui/icons/Chat";
+
+import { Container, Leftside, Rightside } from "./styles/Header";
+
+import InputOption from "../Shared/InputOption";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-import { useDispatch } from "react-redux";
-import InputOption from "../Shared/InputOption";
-
 export default function Header() {
-  /*   const dispatch = useDispatch();
-   */
   return (
-    <div className="header">
-      <div className="header__left">
+    <Container>
+      <Leftside>
         <ArrowDropDownCircleIcon />
         <p>Dark Mode</p>
-      </div>
-      <div className="header__right">
+      </Leftside>
+      <Rightside>
         <InputOption Icon={HomeIcon} title="Home" link="/" />
         <InputOption
           Icon={SupervisorAccountIcon}
@@ -33,7 +31,7 @@ export default function Header() {
         />
         <InputOption Icon={ChatIcon} title="Daily Slice" link="/" />
         <InputOption Icon={AccountCircleIcon} title="About me" link="/" />
-      </div>
-    </div>
+      </Rightside>
+    </Container>
   );
 }

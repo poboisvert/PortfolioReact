@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+node_modules
+
+.DS_Store
+.eslintcache
+
 # Distribution / packaging
 .Python
 build/
@@ -127,3 +132,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+node_modules

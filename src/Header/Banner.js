@@ -1,22 +1,24 @@
 import React from "react";
-import "./Banner.css";
 import UncontrolledLottie from "../components/UncontrolledLottie";
+import { Container, Text, Logo, Span, Top } from "./styles/Banner";
 
 export default function Banner() {
   return (
-    <div className="banner">
-      <UncontrolledLottie />
-      <div className="banner__container">
-        <p>
+    <Container>
+      <Logo>
+        <UncontrolledLottie />
+      </Logo>
+      <Text>
+        <Top>
           Welcome to my portfolio! I'm PO a Python and REACT JS developer based
           in Montreal, Canada. I shape digital products and create reporting
           tools for business owners.
-        </p>
-        <span>
+        </Top>
+        <Span>
           This postfolio use REACT JS (Material UI and styled-components) mixed
           with a REST API
-        </span>
-      </div>
-    </div>
+        </Span>
+      </Text>
+    </Container>
   );
 }

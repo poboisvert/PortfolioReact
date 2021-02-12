@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import NavigationOptions from "../Shared/NavigationOptions";
-import "./ProjectCard.css";
+import { Card, Title, Body, Thumbnail, Image } from "./styles/FetchCard";
 
 const data = {
   content: {
@@ -52,12 +52,12 @@ export default class FetchArticle extends React.Component {
         ) : (
           <>
             {data.content.body.map((block) => (
-              <div className="projetcard">
-                <div className={block.div}>
-                  <img src={block.image} alt="" />
-                </div>
-                <div className="projetcard__title">{block.title}</div>
-                <div className="projetcard__description">
+              <Card>
+                <Thumbnail>
+                  <Image src={block.image} alt="" />
+                </Thumbnail>
+                <Title>{block.title}</Title>
+                <Body>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -85,8 +85,8 @@ export default class FetchArticle extends React.Component {
                       color="#4201ff"
                     />
                   </div>
-                </div>
-              </div>
+                </Body>
+              </Card>
             ))}
           </>
         )}

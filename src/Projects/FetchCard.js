@@ -1,7 +1,14 @@
 import React from "react";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import NavigationOptions from "../Shared/NavigationOptions";
-import { Card, Title, Body, Thumbnail, Image } from "./styles/FetchCard";
+import {
+  Card,
+  Title,
+  Body,
+  Thumbnail,
+  Image,
+  Navigation,
+} from "./styles/FetchCard";
 
 const data = {
   content: {
@@ -73,7 +80,7 @@ export default class FetchArticle extends React.Component {
                     ullamcorper malesuada proin. Ac ut consequat semper viverra
                     nam. Fusce id velit ut tortor pretium.
                   </p>
-                  <div className="projetcard__icon">
+                  <Navigation>
                     <NavigationOptions
                       Icon={ArrowRightIcon}
                       title="See Live"
@@ -84,7 +91,7 @@ export default class FetchArticle extends React.Component {
                       title="Source Code"
                       color="#4201ff"
                     />
-                  </div>
+                  </Navigation>
                 </Body>
               </Card>
             ))}

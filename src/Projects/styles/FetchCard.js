@@ -28,3 +28,8 @@ export const Image = styled.img`
   min-width: 350px;
   object-fit: cover;
 `;
+
+export const Navigation = styled.div`
+  display: flex;
+  flex-direction: row;
+`;

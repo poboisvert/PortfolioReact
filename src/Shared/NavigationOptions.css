@@ -4,6 +4,10 @@
   color: gray;
   padding: 10px 10px 10px 0;
   cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  max-width: 100px;
 }
 
 .navigationOption:hover {

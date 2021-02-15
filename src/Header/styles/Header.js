@@ -5,7 +5,6 @@ export const Container = styled.div`
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: white;
   border-bottom: 4px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -17,7 +16,6 @@ export const Container = styled.div`
     top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: white;
     border-bottom: 1px solid black;
     padding: 0;
     width: 100%;
@@ -30,6 +28,8 @@ export const Leftside = styled.div`
   object-fit: contain;
   align-items: center;
   color: #4201ff;
+  background-color: white;
+  border-radius: 10px;
   padding: 5px;
   font-size: 14px;
   font-weight: 400;
@@ -37,6 +37,7 @@ export const Leftside = styled.div`
   &:hover {
     background-color: whitesmoke;
     border-radius: 10px;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     padding: 2px;

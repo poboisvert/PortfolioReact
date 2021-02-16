@@ -8,6 +8,7 @@ export const useDarkMode = () => {
     setTheme(mode);
   };
 
+  console.log(setTheme);
   const themeToggler = () => {
     theme === "light" ? setMode("dark") : setMode("light");
   };

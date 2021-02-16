@@ -29,7 +29,7 @@
   <p align="center">
     Professionnal presentaion of recent projects published
     <br />
-    <a href="https://portfolio-544c1.web.app/">View Demo</a>
+    <a href="https://portfolio-a295a.web.app">View Demo (2021)</a>
     ·
     <a href="https://github.com/poboisvert/portfolio_app_react/repo_name/issues">Report Bug</a>
   </p>

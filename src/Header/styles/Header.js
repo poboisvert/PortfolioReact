@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { createGlobalStyle } from "styled-components";
 
 export const Container = styled.div`
   position: sticky;
@@ -8,8 +9,10 @@ export const Container = styled.div`
   border-bottom: 4px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: ${({ theme }) => theme.body};
   width: 100%;
   z-index: 999;
+  transition: all 0.5s linear;
   @media (max-width: 768px) {
     min-width: 250px !important;
     position: sticky;

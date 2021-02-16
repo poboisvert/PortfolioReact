@@ -15,42 +15,47 @@ const data = {
   content: {
     body: [
       {
-        image: "https://miro.medium.com/max/3200/1*TIN8U8PrTIKNaNGn5jZcDw.png",
-        title: "7 principles of icon design",
+        image: "https://miro.medium.com/max/1400/0*_xkpeA_oDwNH88Lc",
+        title: "Simple Git commands",
         description:
-          "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
-        link: "www.google.com",
+          "As a developer you probably need Git on a daily basis. There are lots of articles about basic Git command...",
+        link:
+          "https://levelup.gitconnected.com/using-git-commands-that-will-make-you-look-like-a-senior-developer-14247f4aca3b",
         islast: null,
-        div: "<Article>",
+        date: "Oct 5, 2020",
+      },
+      {
+        image: "https://miro.medium.com/max/1400/1*fSVqwZGBw4_vMfAExprT2g.png",
+        title: "Grokking Algorithms — Book Review",
+        description:
+          "Hello guys, I have read many books on data structures and algorithms like Introduction to Algorithms by Thomas...",
+        link:
+          "https://medium.com/hackernoon/grokking-algorithms-book-review-aa4459da93f5",
+        islast: "last",
+        date: "Jun 3, 2019",
       },
       {
         image:
-          "https://www.webdesignerdepot.com/cdn-origin/uploads/2018/05/featured_ux-1.jpg",
-        title: "Create Medium posts from Markdown in a snap",
+          "https://cdn-images-1.medium.com/fit/t/1600/480/1*1380x8iqFlXB8-e_R7KXVw.png",
+        title: "Create a simple payment flow with Stripe",
         description:
-          "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-        link: "www.google.com",
+          "Learn how to easily set up a payment flow on your web application using a ReactJs...",
+        link:
+          "https://blog.hackages.io/create-a-simple-payment-flow-with-stripe-b1d0f0f94337",
         islast: null,
-        div: "<Article>",
+        date: "May 15, 2019",
       },
       {
         image:
-          "https://edwardmbanasor.com/wp-content/uploads/2019/08/Medium-Logo.jpg",
-        title: "23 popular Medium design articles of 2021",
+          "https://hbr.org/resources/images/article_assets/2017/02/feb17-06-682304915.jpg",
+        title:
+          "Emotional Intelligence Has 12 Elements. Which Do You Need to Work On?",
         description:
           "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-        link: "www.google.com",
-        islast: null,
-        div: "<Article>",
-      },
-      {
-        image: "https://markdowntomedium.com/img/markdowneditor.jpg",
-        title: "How to master the design pattern",
-        description:
-          "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        link: "www.google.com",
+        link:
+          "https://hbr.org/2017/02/emotional-intelligence-has-12-elements-which-do-you-need-to-work-on?utm_medium=social&utm_campaign=hbr&utm_source=linkedin&tpcc=orgsocial_edit",
         islast: "last",
-        div: "<Article>",
+        date: "February 06, 2017",
       },
     ],
   },
@@ -71,13 +76,14 @@ export default class FetchArticle extends React.Component {
                     <Preview>
                       <Image src={block.image} alt="thumbnail" />
                     </Preview>
-                    <Text>January 21, 2021</Text>
+                    <Text>{block.date}</Text>
                     <Title>{block.title}</Title>
                     <p>{block.description}</p>
                     <NavigationOptions
                       Icon={ArrowRightIcon}
                       title="Read More"
                       color="#4201ff"
+                      link={block.link}
                     />
                   </Last>
                 ) : (
@@ -85,13 +91,14 @@ export default class FetchArticle extends React.Component {
                     <Preview>
                       <Image src={block.image} alt="thumbnail" />
                     </Preview>
-                    <Text>January 21, 2021</Text>
+                    <Text>{block.date}</Text>
                     <Title>{block.title}</Title>
                     <p>{block.description}</p>
                     <NavigationOptions
                       Icon={ArrowRightIcon}
                       title="Read More"
                       color="#4201ff"
+                      link={block.link}
                     />
                   </Article>
                 )}

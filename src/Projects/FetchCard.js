@@ -14,37 +14,34 @@ const data = {
   content: {
     body: [
       {
-        title: "Brain Bar",
+        title: "microservice_flask",
         image:
-          "https://preview.redd.it/rtth99ngv4261.png?width=3840&format=png&auto=webp&s=187103053e2c4ba2ef33e3f91e0ca1f8a938da21",
+          "https://www.freecodecamp.org/news/content/images/2020/12/pythonmicroservices.png",
         islast: null,
         div: "projetcard__thumbnail",
+        url: "https://github.com/poboisvert/microservice_flask",
+        description:
+          "[REACT/Python] This project uses Python, Flask, Flask-RESTful, Flask-SQLAlchemy for a microservice (POST, GET, PUT and DEL) on PORT 5000 and a React Redux (payload) Frontend on PORT 3000.",
       },
       {
-        title: "Story Book",
-        image: "https://miro.medium.com/max/1200/1*I1bJuD1D5G2FvWP5IVyyFQ.png",
+        title: "portfolio_reacts",
+        image:
+          "https://github.com/poboisvert/portfolio_react/raw/main/preview.png",
         islast: null,
         div: "projetcard__thumbnail",
+        url: "https://github.com/poboisvert/portfolio_react",
+        description:
+          "[REACT] This project is ongoing since this is my personal portfolio of my recents projects. In 2021, the portfolio is based on REACT with a JSON to display the projects.",
       },
       {
-        title: "Northrop Chat Bot",
+        title: "World_Weather_Analysis",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzlPBiPy1Cb78YkHdO89BTrGT3HTytNSpUw&usqp=CAU",
+          "https://www.aerisweather.com/blog/wp-content/uploads/2019/03/tempmap2.png",
         islast: null,
         div: "projetcard__thumbnail large",
-      },
-      {
-        title: "Favorite Store",
-        image: "https://i.ytimg.com/vi/pO9-WlU7B-c/maxresdefault.jpg",
-        islast: "last",
-        div: "projetcard__thumbnail",
-      },
-      {
-        title: "Mission Avocado",
-        image:
-          "https://cms-assets.tutsplus.com/uploads/users/178/posts/21027/preview_image/thumbnail.jpg",
-        islast: "last",
-        div: "projetcard__thumbnail",
+        url: "https://github.com/poboisvert/World_Weather_Analysis",
+        description:
+          "[Python] This project use two APIs and provide real-time suggestions for booking hotels that were (1) within a given range of latitude and longitude and that (2) provided the right kind of weather for the client.",
       },
     ],
   },
@@ -65,31 +62,13 @@ export default class FetchArticle extends React.Component {
                 </Thumbnail>
                 <Title>{block.title}</Title>
                 <Body>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Scelerisque felis imperdiet proin fermentum leo vel.
-                    Diam maecenas sed enim ut sem viverra.
-                  </p>
-                  <p>
-                    Praesent elementum facilisis leo vel fringilla est
-                    ullamcorper. Neque ornare aenean euismod elementum nisi quis
-                    eleifend. Congue nisi vitae suscipit tellus mauris. Eget
-                    lorem dolor sed viverra. Nisi porta lorem mollis aliquam ut
-                    porttitor leo a. Tincidunt nunc pulvinar sapien et ligula
-                    ullamcorper malesuada proin. Ac ut consequat semper viverra
-                    nam. Fusce id velit ut tortor pretium.
-                  </p>
+                  <p>{block.description}</p>
                   <Navigation>
-                    <NavigationOptions
-                      Icon={ArrowRightIcon}
-                      title="See Live"
-                      color="gray"
-                    />
                     <NavigationOptions
                       Icon={ArrowRightIcon}
                       title="Source Code"
                       color="#4201ff"
+                      link={block.url}
                     />
                   </Navigation>
                 </Body>

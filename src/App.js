@@ -6,26 +6,26 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectTheme } from "./features/themeSlice";
+import { selectTheme } from "./components/Theme/themeSlice";
 
 import "./App.css";
 // Module
-import Banner from "./Header/Banner";
-import Header from "./Header/Header";
-import Subcategory from "./Subcategory/Subcategory";
+import Banner from "./components/Header/Banner";
+import Header from "./components/Header/Header";
+import Subcategory from "./components/Subcategory/Subcategory";
 import MenuIcon from "@material-ui/icons/Menu";
 import PublicIcon from "@material-ui/icons/Public";
 import ConditionalWrapper from "./ConditionalWrapper";
-import Footer from "./Footer/Footer";
-import ProjectContainer from "./Projects/ProjectContainer";
-import ArticlesContainer from "./Articles/ArticlesContainer";
+import Footer from "./components/Footer/Footer";
+import ProjectContainer from "./components/Projects/ProjectContainer";
+import ArticlesContainer from "./components/Articles/ArticlesContainer";
 // Dark Theme
 import { ThemeProvider } from "styled-components";
-import { useDarkMode } from "./components/useDarkMode";
-import { GlobalStyles } from "./components/GlobalStyle";
-import { lightTheme, darkTheme } from "./components/Theme";
+import { useDarkMode } from "./components/Theme/useDarkMode";
+import { GlobalStyles } from "./components/Theme/GlobalStyle";
+import { lightTheme, darkTheme } from "./components/Theme/Theme";
 
-import { About } from "./About/About";
+import { About } from "./components/About/About";
 
 /* https://blog.hackages.io/
  */

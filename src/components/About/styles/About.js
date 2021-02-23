@@ -8,10 +8,10 @@ export const Container = styled.div`
 `;
 
 export const Block = styled.div`
-  background-color: ${(props) => props.background};
   display: flex;
+  background-color: ${(props) => props.background};
+  flex-direction: ${(props) => props.direction};
   flex: 0.7;
-  justify-content: space-between;
   margin: 20px;
 `;
 

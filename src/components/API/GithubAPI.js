@@ -1,6 +1,13 @@
 import React from "react";
 import axios from "axios";
-import { Container, Inner, Pane, Title, SubTitle, Image } from "./styles/api";
+import {
+  Container,
+  Inner,
+  Pane,
+  Title,
+  SubTitle,
+  Image,
+} from "./styles/FetchActive";
 import {
   Card,
   TitleCard,
@@ -8,7 +15,8 @@ import {
   Thumbnail,
   ImageCard,
   Navigation,
-} from "../Projects/styles/FetchCard";
+} from "./styles/FetchCard";
+
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import NavigationOptions from "../Shared/NavigationOptions";
 
@@ -40,6 +48,7 @@ export default class GithubAPI extends React.Component {
 
   render() {
     return (
+      // Will return only the content the are matchign the .fliter()
       <>
         {this.props.type === "jumbotron" ? (
           <>
@@ -48,7 +57,7 @@ export default class GithubAPI extends React.Component {
                 .filter(
                   (array) =>
                     array.name === "market_flask" ||
-                    array.name === "portfolio_react"
+                    array.name === "docker_microservice"
                 )
                 .map((project, i) => (
                   <>
@@ -59,6 +68,12 @@ export default class GithubAPI extends React.Component {
                       </Pane>
                       <Pane>
                         <Image src={project.homepage} />
+                        <NavigationOptions
+                          Icon={ArrowRightIcon}
+                          title="Source Code"
+                          color="#5c3cfc"
+                          link={project.html_url}
+                        />
                       </Pane>
                     </Container>
                   </>
@@ -66,6 +81,7 @@ export default class GithubAPI extends React.Component {
             </Inner>
           </>
         ) : (
+          // Will return the 6 last project by using slice(0, 6)
           <>
             {this.state.rev_projects.slice(0, 6).map((project, i) => (
               <Card id={i}>

@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectTheme } from "./components/Theme/themeSlice";
+// REACT BROWSE
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 // Module
 import Banner from "./components/Header/Banner";
 import Header from "./components/Header/Header";
 import Subcategory from "./components/Subcategory/Subcategory";
+// Material UI
 import MenuIcon from "@material-ui/icons/Menu";
 import PublicIcon from "@material-ui/icons/Public";
 import ChatIcon from "@material-ui/icons/Chat";
 import ConditionalWrapper from "./ConditionalWrapper";
 import Footer from "./components/Footer/Footer";
+// CARD Container
 import ProjectContainer from "./components/Projects/ProjectContainer";
 import ArticlesContainer from "./components/Articles/ArticlesContainer";
 // Dark Theme
@@ -25,13 +22,16 @@ import { ThemeProvider } from "styled-components";
 import { useDarkMode } from "./components/Theme/useDarkMode";
 import { GlobalStyles } from "./components/Theme/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Theme/Theme";
+import { selectTheme } from "./components/Theme/themeSlice";
 
 import { About } from "./components/About/About";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
+// ROUTES
+import * as ROUTES from "./constants/routes";
 
 /* https://blog.hackages.io/
  */
-function App() {
+export default function App() {
   const theme = useSelector(selectTheme);
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
@@ -46,7 +46,7 @@ function App() {
               <Banner />
               <Route
                 exact
-                path="/"
+                path={ROUTES.HOME}
                 render={() => (
                   <React.Fragment>
                     <ConditionalWrapper>
@@ -64,7 +64,7 @@ function App() {
                   </React.Fragment>
                 )}
               />
-              <Route exact path="/about" component={About} />
+              <Route exact path={ROUTES.ABOUT} component={About} />
 
               <Footer />
             </div>
@@ -74,5 +74,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

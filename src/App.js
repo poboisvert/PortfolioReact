@@ -15,6 +15,7 @@ import Header from "./components/Header/Header";
 import Subcategory from "./components/Subcategory/Subcategory";
 import MenuIcon from "@material-ui/icons/Menu";
 import PublicIcon from "@material-ui/icons/Public";
+import ChatIcon from "@material-ui/icons/Chat";
 import ConditionalWrapper from "./ConditionalWrapper";
 import Footer from "./components/Footer/Footer";
 import ProjectContainer from "./components/Projects/ProjectContainer";
@@ -53,7 +54,7 @@ function App() {
                     </ConditionalWrapper>
                     <ArticlesContainer />
                     <ConditionalWrapper>
-                      <Subcategory icon={PublicIcon} title="Active projects" />
+                      <Subcategory icon={ChatIcon} title="Active projects" />
                     </ConditionalWrapper>
                     <Jumbotron />
                     <ConditionalWrapper>

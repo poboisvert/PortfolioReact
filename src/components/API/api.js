@@ -1,6 +1,16 @@
 import React from "react";
 import axios from "axios";
 import { Container, Inner, Pane, Title, SubTitle, Image } from "./styles/api";
+import {
+  Card,
+  TitleCard,
+  Body,
+  Thumbnail,
+  ImageCard,
+  Navigation,
+} from "../Projects/styles/FetchCard";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import NavigationOptions from "../Shared/NavigationOptions";
 
 export default class GithubAPI extends React.Component {
   state = {
@@ -31,9 +41,7 @@ export default class GithubAPI extends React.Component {
   render() {
     return (
       <>
-        {!this.state.rev_projects ? (
-          "Please review the data structure for the variable data"
-        ) : (
+        {this.props.type === "jumbotron" ? (
           <>
             <Inner direction="row">
               {this.state.rev_projects
@@ -56,6 +64,35 @@ export default class GithubAPI extends React.Component {
                   </>
                 ))}
             </Inner>
+          </>
+        ) : (
+          <>
+            {this.state.rev_projects.slice(0, 6).map((project, i) => (
+              <Card id={i}>
+                <Thumbnail>
+                  {!project.homepage ? (
+                    <ImageCard src="banner.png" alt="" />
+                  ) : (
+                    <ImageCard src={project.homepage} alt="" />
+                  )}
+                </Thumbnail>
+                <TitleCard>
+                  {project.name} |{" "}
+                  {new Date(project.created_at).toLocaleDateString()}
+                </TitleCard>
+                <Body>
+                  <p>{project.description}</p>
+                  <Navigation>
+                    <NavigationOptions
+                      Icon={ArrowRightIcon}
+                      title="Source Code"
+                      color="#5c3cfc"
+                      link={project.html_url}
+                    />
+                  </Navigation>
+                </Body>
+              </Card>
+            ))}
           </>
         )}
       </>

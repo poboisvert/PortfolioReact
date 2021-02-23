@@ -17,12 +17,17 @@ export default class FetchArticle extends React.Component {
     rev_projects: [],
   };
 
-  /*   componentDidMount() {
+  /*   
+  
+  Fetch for general profile
+
+  componentDidMount() {
     axios.get(`https://api.github.com/users/poboisvert`).then((res) => {
       const persons = res.data;
       this.setState({ persons });
     });
   } */
+
   compareBy(key, ascending) {
     let reverse = ascending ? 1 : -1;
     return function (a, b) {
@@ -31,15 +36,13 @@ export default class FetchArticle extends React.Component {
       return 0;
     };
   }
-  async componentDidMount() {
+  componentDidMount() {
     try {
-      axios
-        .get(`https://api.github.com/users/poboisvert/repos?per_page=50`)
-        .then((res) => {
-          let rev_projects = res.data;
-          rev_projects.sort(this.compareBy("id"));
-          this.setState({ rev_projects });
-        });
+      axios.get(`https://api.github.com/users/poboisvert/repos`).then((res) => {
+        let rev_projects = res.data;
+        rev_projects.sort(this.compareBy("id"));
+        this.setState({ rev_projects });
+      });
     } catch (e) {
       console.log(e);
     }

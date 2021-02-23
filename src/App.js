@@ -26,6 +26,7 @@ import { GlobalStyles } from "./components/Theme/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Theme/Theme";
 
 import { About } from "./components/About/About";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
 
 /* https://blog.hackages.io/
  */
@@ -52,6 +53,10 @@ function App() {
                     </ConditionalWrapper>
                     <ArticlesContainer />
                     <ConditionalWrapper>
+                      <Subcategory icon={PublicIcon} title="Active projects" />
+                    </ConditionalWrapper>
+                    <Jumbotron />
+                    <ConditionalWrapper>
                       <Subcategory icon={PublicIcon} title="Projects" />
                     </ConditionalWrapper>
                     <ProjectContainer />
@@ -59,6 +64,7 @@ function App() {
                 )}
               />
               <Route exact path="/about" component={About} />
+
               <Footer />
             </div>
           </Switch>

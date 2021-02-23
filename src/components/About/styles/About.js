@@ -25,7 +25,7 @@ export const Text = styled.p`
 export const Image = styled.img`
   display: flex;
   flex: 0.3;
-  max-height: 450px;
+  max-height: 350px;
   object-fit: cover;
   margin: 0 auto;
   padding: 10px;

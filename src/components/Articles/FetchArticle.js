@@ -11,6 +11,7 @@ import {
   Last,
 } from "./styles/FetchArticle";
 
+// Articles storage
 const data = {
   content: {
     body: [

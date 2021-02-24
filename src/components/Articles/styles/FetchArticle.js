@@ -22,13 +22,16 @@ export const Article = styled.div`
     border-radius: 20px 0 0 20px;
   }
   @media screen and (max-width: 768px) {
-    border-bottom: 1px solid whitesmoke;
-    border-right: 0;
+    border-bottom: 1px solid black;
     &:last-child:hover {
       border-radius: 0 0 20px 20px;
-  }
-  &:first-child:hover {
-    border-radius: 20px 20px 0 0;
+    }
+    &:first-child:hover {
+      border-radius: 20px 20px 0 0;
+    }
+    &:last-child {
+      border: 0;
+    }
   }
 `;
 
@@ -48,7 +51,6 @@ export const Preview = styled.div`
   align-items: center;
   @media screen and (max-width: 768px) {
     max-width: 100%;
-    height: 50px;
   }
 `;
 

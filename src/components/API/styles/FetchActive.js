@@ -19,7 +19,7 @@ export const Pane = styled.div`
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 0 45px;
+    padding: 0 10px;
     text-align: center;
   }
 `;
@@ -30,7 +30,7 @@ export const Title = styled.h1`
   margin-bottom: 10px;
 
   @media (max-width: 600px) {
-    font-size: 35px;
+    font-size: 14px;
   }
 `;
 
@@ -40,7 +40,7 @@ export const SubTitle = styled.h2`
   line-height: normal;
 
   @media (max-width: 600px) {
-    font-size: 18px;
+    font-size: 10px;
   }
 `;
 
@@ -62,10 +62,4 @@ export const Container = styled.div`
   flex: 0.5;
   flex-direction: row;
   justify-content: space-evenly;
-
-  @media (max-width: 1000px) {
-    ${Item}:last-of-type h2 {
-      margin-bottom: 50px;
-    }
-  }
 `;

@@ -20,6 +20,9 @@ export const Text = styled.p`
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 export const Image = styled.img`

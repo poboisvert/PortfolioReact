@@ -5,7 +5,7 @@ export const Inner = styled.div`
   flex-direction: ${({ direction }) => direction};
   justify-content: center;
 
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -17,7 +17,7 @@ export const Pane = styled.div`
   align-items: center;
   padding: 20px;
 
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 45px;
     text-align: center;
@@ -29,7 +29,7 @@ export const Title = styled.h1`
   line-height: 1.1;
   margin-bottom: 8px;
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 35px;
   }
 `;
@@ -39,7 +39,7 @@ export const SubTitle = styled.h2`
   font-weight: normal;
   line-height: normal;
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 18px;
   }
 `;
@@ -63,7 +63,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
 
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     ${Item}:last-of-type h2 {
       margin-bottom: 50px;
     }

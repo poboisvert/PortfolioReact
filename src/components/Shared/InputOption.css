@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   margin-right: 20px;
-  color: gray;
+  color: black;
   cursor: pointer;
   padding: 5px;
 }
 .inputOption > a {
   outline: none;
   text-decoration: none !important;
-  color: gray;
+  color: black;
 }
 
 .inputOption:hover {

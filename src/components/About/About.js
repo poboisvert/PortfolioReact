@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <Container>
       <Block key="1" background="" direction="row">
-        <Image src="icon1.jpg" />
+        <Image src="icon1.png" />
         <Text>
           Completed a Bootcamp at University Of Toronto and I am able to use
           ReactJs, PostgreSQL (MySQL), Python, HTML5, and CSS. Strong
@@ -22,7 +22,7 @@ export const About = () => {
       </Block>
 
       <Block key="2" background={themeMode.sub} direction="row-reverse">
-        <Image src="icon2.jpg" />
+        <Image src="icon2.png" />
         <Text>
           Completed a MBA and loves to transform ideas into reality using code.
           I am passionate about using Javascript and Python to create user
@@ -30,7 +30,7 @@ export const About = () => {
         </Text>
       </Block>
       <Block key="3" background="" direction="row">
-        <Image src="icon3.jpg" />
+        <Image src="icon3.png" />
         <Text>
           Started in 2020 developing web applications using the latest front-end
           and back-end technologies.

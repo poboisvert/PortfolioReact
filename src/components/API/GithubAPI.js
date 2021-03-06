@@ -56,8 +56,7 @@ export default class GithubAPI extends React.Component {
               {this.state.rev_projects
                 .filter(
                   (array) =>
-                    array.name === "market_flask" ||
-                    array.name === "docker_microservice"
+                    array.name === "FirstGCP" || array.name === "MaketPython"
                 )
                 .map((project, i) => (
                   <>
@@ -67,10 +66,10 @@ export default class GithubAPI extends React.Component {
                         <SubTitle>{project.description}</SubTitle>
                       </Pane>
                       <Pane>
-                        <Image src={project.homepage} />
+                        <Image src={project.homepage} alt="thumbnail" />
                         <NavigationOptions
                           Icon={ArrowRightIcon}
-                          title="Source Code"
+                          title="learn more"
                           color="#5c3cfc"
                           link={project.html_url}
                         />
@@ -101,7 +100,7 @@ export default class GithubAPI extends React.Component {
                   <Navigation>
                     <NavigationOptions
                       Icon={ArrowRightIcon}
-                      title="Source Code"
+                      title="Learn more"
                       color="#5c3cfc"
                       link={project.html_url}
                     />

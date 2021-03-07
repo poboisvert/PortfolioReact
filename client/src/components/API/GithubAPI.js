@@ -56,7 +56,7 @@ export default class GithubAPI extends React.Component {
               {this.state.rev_projects
                 .filter(
                   (array) =>
-                    array.name === "FirstGCP" || array.name === "MaketPython"
+                    array.name === "NatsGCP" || array.name === "MaketPython"
                 )
                 .map((project, i) => (
                   <>

@@ -1,10 +1,10 @@
-import React from "react";
-import GithubAPI from "../API/GithubAPI";
+import React from 'react';
+import GithubAPI from '../../api/GithubAPI';
 
 export default function Jumbotron() {
   return (
     <>
-      <GithubAPI type="jumbotron" />
+      <GithubAPI type='jumbotron' />
     </>
   );
 }

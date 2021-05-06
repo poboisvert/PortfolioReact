@@ -1,6 +1,6 @@
-import React from "react";
-import UncontrolledLottie from "../Lottie/UncontrolledLottie";
-import { Container, Text, Logo, Span, Top } from "./styles/Banner";
+import React from 'react';
+import UncontrolledLottie from '../Lottie/UncontrolledLottie';
+import { Container, Text, Logo, Span, Top } from './styles/Banner';
 
 export default function Banner() {
   return (

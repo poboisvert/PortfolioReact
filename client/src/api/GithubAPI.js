@@ -1,5 +1,5 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 import {
   Container,
   Inner,
@@ -7,7 +7,7 @@ import {
   Title,
   SubTitle,
   Image,
-} from "./styles/FetchActive";
+} from './styles/FetchActive';
 import {
   Card,
   TitleCard,
@@ -15,10 +15,10 @@ import {
   Thumbnail,
   ImageCard,
   Navigation,
-} from "./styles/FetchCard";
+} from './styles/FetchCard';
 
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import NavigationOptions from "../Shared/NavigationOptions";
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import NavigationOptions from '../components/Shared/NavigationOptions';
 
 export default class GithubAPI extends React.Component {
   state = {
@@ -37,7 +37,7 @@ export default class GithubAPI extends React.Component {
     try {
       axios.get(`https://api.github.com/users/poboisvert/repos`).then((res) => {
         let rev_projects = res.data;
-        rev_projects.sort(this.compareBy("id"));
+        rev_projects.sort(this.compareBy('id'));
         this.setState({ rev_projects });
         console.log(rev_projects);
       });
@@ -50,13 +50,13 @@ export default class GithubAPI extends React.Component {
     return (
       // Will return only the content the are matchign the .fliter()
       <>
-        {this.props.type === "jumbotron" ? (
+        {this.props.type === 'jumbotron' ? (
           <>
-            <Inner direction="row">
+            <Inner direction='row'>
               {this.state.rev_projects
                 .filter(
                   (array) =>
-                    array.name === "NatsGCP" || array.name === "MaketPython"
+                    array.name === 'EditorTS' || array.name === 'FlaskMarket'
                 )
                 .map((project, i) => (
                   <>
@@ -66,11 +66,11 @@ export default class GithubAPI extends React.Component {
                         <SubTitle>{project.description}</SubTitle>
                       </Pane>
                       <Pane>
-                        <Image src={project.homepage} alt="thumbnail" />
+                        <Image src={project.homepage} alt='thumbnail' />
                         <NavigationOptions
                           Icon={ArrowRightIcon}
-                          title="Learn more"
-                          color="#5c3cfc"
+                          title='Learn more'
+                          color='#5c3cfc'
                           link={project.html_url}
                         />
                       </Pane>
@@ -86,13 +86,13 @@ export default class GithubAPI extends React.Component {
               <Card id={i}>
                 <Thumbnail>
                   {!project.homepage ? (
-                    <ImageCard src="banner.png" alt="" />
+                    <ImageCard src='banner.png' alt='' />
                   ) : (
-                    <ImageCard src={project.homepage} alt="" />
+                    <ImageCard src={project.homepage} alt='' />
                   )}
                 </Thumbnail>
                 <TitleCard>
-                  {project.name} |{" "}
+                  {project.name} |{' '}
                   {new Date(project.created_at).toLocaleDateString()}
                 </TitleCard>
                 <Body>
@@ -100,8 +100,8 @@ export default class GithubAPI extends React.Component {
                   <Navigation>
                     <NavigationOptions
                       Icon={ArrowRightIcon}
-                      title="Learn more"
-                      color="#5c3cfc"
+                      title='Learn more'
+                      color='#5c3cfc'
                       link={project.html_url}
                     />
                   </Navigation>

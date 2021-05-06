@@ -44,10 +44,9 @@ The goal of this project is to build a portfolio to present recent projects with
 
 ![Generic](preview.png)
 
-### Built With
+### Ressources:
 
-- [React](React)
-- [Firebase](Firebase)
+Software: React 17, Docker, Kubernetes
 
 <!-- GETTING STARTED -->
 
@@ -81,6 +80,8 @@ This is an example of how to list things you need to use the software and how to
 
 > docker run -p 3001:3000 pob944/portfolio
 
+> docker push pob944/portfolio
+
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -88,10 +89,6 @@ This is an example of how to list things you need to use the software and how to
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 <!-- ROADMAP -->
-
-## Roadmap
-
-See the [open issues](https://github.com/poboisvert/portfolio_app_react/issues) for a list of proposed features (and known issues).
 
 <!-- LICENSE -->
 

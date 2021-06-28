@@ -6,35 +6,9 @@
   <h3 align="center">Portfolio (articles and projects with REACT and Firebase)</h3>
 
   <p align="center">
-    Professionnal presentaion of recent projects published
-    <br />
-    <a href="https://portfolio-a541e.web.app/">View Demo (2021)</a>
+    <a href="https://portfolio-a541e.web.app/">View Live Demo</a>
   </p>
 </p>
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -46,7 +20,7 @@ The goal of this project is to build a portfolio to present recent projects with
 
 ### Ressources:
 
-Software: React 17, Docker, Kubernetes
+> Software: React 17, Docker, Kubernetes
 
 <!-- GETTING STARTED -->
 
@@ -81,20 +55,6 @@ This is an example of how to list things you need to use the software and how to
 > docker run -p 3001:3000 pob944/portfolio
 
 > docker push pob944/portfolio
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-<!-- ROADMAP -->
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 

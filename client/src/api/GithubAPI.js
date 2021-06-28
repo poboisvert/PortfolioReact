@@ -48,7 +48,7 @@ export default class GithubAPI extends React.Component {
 
   render() {
     return (
-      // Will return only the content the are matchign the .fliter() -
+      // Will return only the content the are matchign the .fliter()
       <>
         {this.props.type === 'jumbotron' ? (
           <>

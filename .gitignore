@@ -5,14 +5,13 @@ __pycache__/
 
 # C extensions
 *.so
-client/node_modules
+node_modules
 
 .DS_Store
 .eslintcache
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/

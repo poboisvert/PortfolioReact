@@ -56,7 +56,7 @@ export default class GithubAPI extends React.Component {
               {this.state.rev_projects
                 .filter(
                   (array) =>
-                    array.name === 'EditorTS' || array.name === 'FlaskMarket'
+                    array.name === 'EditorTS' || array.name === 'BonnetHoodNative'
                 )
                 .map((project, i) => (
                   <>

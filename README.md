@@ -14,11 +14,11 @@
 
 ## About The Project
 
-The goal of this project is to build a portfolio to present recent projects with Firebase and React. The minimalist and monochrome is the main idea for the UX design.
+The goal of this project is to build a portfolio to present recent projects with Firebase and React. The minimalist and monochrome is the main idea for the UX design. This project explores API connection to a Github repository, Wrapper, Jumbotron and Redux to animate the dark mode.
 
 ![Generic](preview.png)
 
-### Ressources:
+### Ressources
 
 > Software: React 17, Docker, Kubernetes
 
@@ -44,11 +44,15 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/poboisvert/portfolio_react
    ```
 2. Install NPM packages
-   ```sh
-   npm install
+   ```
+   cd client && npm install
+   ```
+3. Run Node
+   ```
+   npm start
    ```
 
-### Docker Build
+### Build a Docker image
 
 > docker build -t pob944/portfolio .
 

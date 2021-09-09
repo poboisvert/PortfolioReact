@@ -30,6 +30,8 @@ Demo: https://portfolio-a541e.web.app/
 
 Github: https://github.com/poboisvert/PortfolioReact
 
+The Article: https://dev.to/poboisvert/the-lazy-github-portfolio-587k
+
 ## :vulcan_salute: What do I need to change?
 
 > Change with you favorite URL in the top menu to fetch your repository
